@@ -1,0 +1,67 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f8ff;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Page-specific Styles */
+.lock-container {
+  position: relative;
+  margin-top: 20px;
+}
+
+.lock {
+  width: 100px;
+  height: 120px;
+  background-color: #ccc;
+  border-radius: 10px;
+  position: relative;
+}
+
+.keyhole {
+  width: 20px;
+  height: 40px;
+  background-color: black;
+  border-radius: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#smile {
+  margin-top: 20px;
+  cursor: grab;
+  width: 50px;
+}
+
+/* New Year Card */
+.card {
+  background-color: #fff;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.animations {
+  margin-top: 20px;
+  /* Add animation classes here */
+}

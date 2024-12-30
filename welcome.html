@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome Page</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page">
+    <h1>Please enter your name to check what Aseen-Priyanka has sent you !!</h1>
+    <p>Your name please:</p>
+    <input type="text" id="userName" placeholder="Your Name" />
+    <button id="startButton">Start</button>
+  </div>
+  <script>
+    document.getElementById("startButton").addEventListener("click", () => {
+      const userName = document.getElementById("userName").value.trim();
+      if (userName) {
+        localStorage.setItem("userName", userName); // Save name in localStorage
+        window.location.href = "unlock.html"; // Navigate to Unlock Page
+      } else {
+        alert("Please enter your name!");
+      }
+    });
+  </script>
+</body>
+</html>

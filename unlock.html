@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unlock Page</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page">
+    <h2>Smile is the Key</h2>
+    <div class="lock-container">
+      <div class="lock">
+        <div class="keyhole"></div>
+      </div>
+      <img src="download.png" id="smile" draggable="true" alt="Smile Icon" />
+    </div>
+    <p id="unlockMessage" class="hidden">Nice Smile :)</p>
+  </div>
+  <script>
+    const smileIcon = document.getElementById("smile");
+    const unlockMessage = document.getElementById("unlockMessage");
+
+    smileIcon.addEventListener("dragend", (event) => {
+      const lock = document.querySelector(".lock");
+      const lockRect = lock.getBoundingClientRect();
+      if (
+        event.clientX > lockRect.left &&
+        event.clientX < lockRect.right &&
+        event.clientY > lockRect.top &&
+        event.clientY < lockRect.bottom
+      ) {
+        unlockMessage.classList.remove("hidden");
+        setTimeout(() => {
+          window.location.href = "card.html"; // Navigate to Card Page
+        }, 2000); // Wait 2 seconds before navigating
+      }
+    });
+  </script>
+</body>
+</html>

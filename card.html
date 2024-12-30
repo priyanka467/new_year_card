@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Year Card</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page">
+    <div class="card">
+      <h1>Happy New Year <span id="userGreeting"></span>!</h1>
+      <p>This year has been wonderful!</p>
+    </div>
+    <div class="animations">
+      <!-- Add flower/petal animations here -->
+    </div>
+  </div>
+  <script>
+    const userName = localStorage.getItem("userName");
+    document.getElementById("userGreeting").textContent = userName ? userName : "Guest";
+  </script>
+</body>
+</html>
