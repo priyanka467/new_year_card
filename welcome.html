@@ -8,8 +8,8 @@
 </head>
 <body>
   <div class="page">
-    <h1>Please enter your name to check what Aseen-Priyanka has sent you !!</h1>
-    <p>Your name please:</p>
+    <h1>Hello There!!</h1>
+    <p>name please:</p>
     <input type="text" id="userName" placeholder="Your Name" />
     <button id="startButton">Start</button>
   </div>
@@ -17,8 +17,8 @@
     document.getElementById("startButton").addEventListener("click", () => {
       const userName = document.getElementById("userName").value.trim();
       if (userName) {
-        localStorage.setItem("userName", userName); // Save name in localStorage
-        window.location.href = "unlock.html"; // Navigate to Unlock Page
+        localStorage.setItem("userName", userName);
+        window.location.href = "unlock.html";
       } else {
         alert("Please enter your name!");
       }
